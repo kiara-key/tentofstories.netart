@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 4</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        * {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("scrabble.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: rgb(36, 36, 40);
+            
+        }
+
+        h2 {
+            color: rgb(49, 45, 56) ;;
+        }
+
+        h2:hover {
+            color: burlywood;
+            
+        }
+
+    </style>
+
+    <script>
+ /* typewriter test */
+var i = 0;
+var txt = 'Great job! What might the next puzzle be?';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+    </script>
+</head>
+<body>
+<div style="background-color: rgb(49, 45, 56) ;">
+<h1 style="text-align: center;background-color: rgb(97, 70, 37); color: lightseagreen; margin-left: 200px; margin-right: 200px;">
+        Solve the 📜 riddle! <br>
+        What am I?
+    </h1>
+    
+</div>
+
+<img src="Poem.jpeg" height="500px" width="auto" style="display: block; margin: auto;" >
+
+ <!--typewriter code-->
+ 
+<div style="background-color: rgb(49, 45, 56); margin-left: 200px; margin-right: 200px;">
+
+<h1 style="color:rgb(148, 116, 77);">Answer:</h1>
+
+<h2>FLOCK</h2>
+
+<button onclick="typeWriter()" style="background-color: rgb(97, 70, 37); color: lightseagreen;"> ✨ THINK YOU FIGURED IT OUT? ✨</button>
+
+<p id="demo" style="font-style: oblique; color: lightseagreen;"> </p>
+
+<a href="Home copy 4.html" style="color:  rgb(49, 45, 56);"><h1>🏠</h1></a>
+
+<audio controls autoplay>
+   <source src="Investigation Medium Audio.mp3" type="audio/mpeg">
+   </audio>
+
+ </div>
+    
+</body>
+</html>
