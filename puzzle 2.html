@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle 2</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+         #myContainer {
+     width: 400px;
+    height: 400px;
+    position: relative;
+     background: rgb(4, 57, 22);
+    }
+
+    #myAnimation {
+     width: 50px;
+     height: 50px;
+     position: absolute;
+     background-color: rgb(114, 187, 104);
+    }
+
+    * {
+            text-align: center;
+        }
+
+        body {
+            background-image: url("grass.jpeg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-color: rgb(4, 57, 22);
+            
+        }
+
+        h2 {
+            color: rgb(4, 57, 22) ;;
+        }
+
+        h2:hover {
+            color: burlywood;
+            
+        }
+
+        .centered{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+
+}
+    </style>
+
+    <script>
+        /* animation test */
+    var id = null;
+function myMove() {
+  var elem = document.getElementById("myAnimation");   
+  var pos = 0;
+  clearInterval(id);
+  id = setInterval(frame, 10);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + 'px'; 
+      elem.style.left = pos + 'px'; 
+    }
+  }
+}
+
+/* typewriter test */
+var i = 0;
+var txt = 'Great job! What might the next puzzle be?';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+
+    </script>
+</head>
+<body>
+
+
+<div style="background-color: rgb(4, 57, 22) ;">
+<h1 style="text-align: center;background-color: rgb(97, 70, 37); color: lightgreen; margin-left: 200px; margin-right: 200px;">
+        String together the message 🗒️!!! <br>
+        
+    </h1>
+    
+</div>
+
+
+<p>
+<button onclick="myMove()" style="background-color:  rgb(97, 70, 37); color: lightgreen;">Click Me</button> 
+</p>
+
+<div class="centered">
+<div id ="myContainer">
+<div id ="myAnimation"><h6>JUST FOLLOW</h6></div>
+<h1 style="color: lightgreen;">GREEN GRASS GROWS GROSS OVER TIME. GENTLY GLOWING AND GLEAMING GOING NOWHERE IMPORTANT.
+    GONE BEFORE GIVING GUEST GHOSTS GRAPES. TRYING TO GROW GIGANTIC AS A GIANT... 🪴🪴🪴🪴🪴🪴
+</h1>
+</div>
+</div>
+
+<!--typewriter code-->
+ 
+<div style="background-color: rgb(4, 57, 22); margin-left: 200px; margin-right: 200px;">
+
+<h1 style="color:lightgreen;">Answer:</h1>
+<h2>Green Grass Gently Gleaming Nowhere Before Ghosts Grow Giant. </h2>
+
+<button onclick="typeWriter()" style="background-color: rgb(97, 70, 37); color: lightgreen;"> ✨ THINK YOU FIGURED IT OUT? ✨</button>
+
+<p id="demo" style="font-style: oblique;color:lightgreen;"> </p>
+
+<a href="Home copy 2.html" style="color: rgb(49, 45, 56);"><h1>🏠</h1></a>
+    
+<audio controls autoplay>
+   <source src="Pastel Slide Short Audio.mp3" type="audio/mpeg">
+   </audio>
+
+</body>
+</html>
