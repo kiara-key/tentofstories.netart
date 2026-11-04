@@ -1,0 +1,20 @@
+.Fractions2{
+    margin: auto;
+    max-width: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: .25fr;
+    gap: 20px; 
+    justify-content:center;
+}
+
+.Fractions2 div {
+    background-color:lightpink;
+    border-style: solid;
+    border-width: 1px;
+    cursor: grab;
+}
+
+.Fractions2 div:active {
+    cursor: grabbing;
+}
